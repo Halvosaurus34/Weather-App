@@ -13,7 +13,7 @@ moment().format("MMM Do YYYY");
 var APIKey = "166a433c57516f51dfab1f7edaed8413";
 var lat = "";
 var lon = "";
-var cityName = "Toronto";
+var cityName = localStorage.lastCity;
 var cityArray = [];
 var cityHistory = [];
 
@@ -118,9 +118,11 @@ $("#searchButton").on("click", function () {
   cityName = $("#cityName").val();
   getWeather();
   saveCity();
+  count++;
 });
 
 function saveCity() {
+  localStorage.lastCity = cityName;
   var cityList = JSON.parse(localStorage.cityList || "[]");
   cityList.push(cityName);
   localStorage.cityList = JSON.stringify(cityList);
