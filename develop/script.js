@@ -13,7 +13,12 @@ moment().format("MMM Do YYYY");
 var APIKey = "166a433c57516f51dfab1f7edaed8413";
 var lat = "";
 var lon = "";
-var cityName = localStorage.lastCity;
+var cityName = "";
+if (!localStorage.lastCity) {
+  cityName = "Toronto";
+} else {
+  cityName = localStorage.lastCity;
+}
 var cityArray = [];
 var cityHistory = [];
 
