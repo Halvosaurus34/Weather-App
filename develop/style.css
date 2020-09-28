@@ -1,0 +1,30 @@
+.card-text {
+  font-size: 18px;
+}
+
+.card-body {
+  padding: 5px;
+}
+
+.searchAside {
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+}
+
+#uv {
+  background-color: none;
+  display: inline;
+}
+
+.navBack {
+  background-color: #e7eff9;
+  background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
+}
+
+.card {
+  background-color: #70b2d9;
+  background-image: linear-gradient(315deg, #70b2d9 0%, #39e5b6 74%);
+}
+.btnOrange {
+  background-color: tomato;
+}
