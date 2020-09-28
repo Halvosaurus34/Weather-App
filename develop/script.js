@@ -123,7 +123,6 @@ $("#searchButton").on("click", function () {
   cityName = $("#cityName").val();
   getWeather();
   saveCity();
-  count++;
 });
 
 function saveCity() {
