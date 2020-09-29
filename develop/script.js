@@ -40,7 +40,7 @@ function getWeather() {
     $("#wind").html(`Wind: ${response.wind.speed} m/s`);
     $("#humid").html(`Humidity: ${response.main.humidity}%`);
     $("#icon").html(
-      `<img class="ml-5" src="http://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png"/>`
+      `<img class="ml-5" src="https://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png"/>`
     );
 
     lat = response.coord.lat;
@@ -59,35 +59,35 @@ function getWeather() {
       $("#humid1").html(`Humidity: ${response.daily[1].humidity}%`);
       console.log(response);
       $("#img1").html(
-        `<img src="http://openweathermap.org/img/wn/${response.daily[1].weather[0].icon}@2x.png"/>`
+        `<img src="https://openweathermap.org/img/wn/${response.daily[1].weather[0].icon}@2x.png"/>`
       );
 
       $("#temp2").html(`Temp: ${response.daily[2].temp.day} \xB0C`);
       $("#date2").text(moment().add(2, "days").format("MMM Do YYYY"));
       $("#humid2").html(`Humidity: ${response.daily[2].humidity}%`);
       $("#img2").html(
-        `<img src="http://openweathermap.org/img/wn/${response.daily[2].weather[0].icon}@2x.png"/>`
+        `<img src="https://openweathermap.org/img/wn/${response.daily[2].weather[0].icon}@2x.png"/>`
       );
 
       $("#temp3").html(`Temp: ${response.daily[3].temp.day} \xB0C`);
       $("#date3").text(moment().add(3, "days").format("MMM Do YYYY"));
       $("#humid3").html(`Humidity: ${response.daily[3].humidity}%`);
       $("#img3").html(
-        `<img src="http://openweathermap.org/img/wn/${response.daily[3].weather[0].icon}@2x.png"/>`
+        `<img src="https://openweathermap.org/img/wn/${response.daily[3].weather[0].icon}@2x.png"/>`
       );
 
       $("#temp4").html(`Temp: ${response.daily[4].temp.day} \xB0C`);
       $("#date4").text(moment().add(4, "days").format("MMM Do YYYY"));
       $("#humid4").html(`Humidity: ${response.daily[4].humidity}%`);
       $("#img4").html(
-        `<img src="http://openweathermap.org/img/wn/${response.daily[4].weather[0].icon}@2x.png"/>`
+        `<img src="https://openweathermap.org/img/wn/${response.daily[4].weather[0].icon}@2x.png"/>`
       );
 
       $("#temp5").html(`Temp: ${response.daily[5].temp.day} \xB0C`);
       $("#date5").text(moment().add(5, "days").format("MMM Do YYYY"));
       $("#humid5").html(`Humidity: ${response.daily[5].humidity}%`);
       $("#img5").html(
-        `<img src="http://openweathermap.org/img/wn/${response.daily[5].weather[0].icon}@2x.png"/>`
+        `<img src="https://openweathermap.org/img/wn/${response.daily[5].weather[0].icon}@2x.png"/>`
       );
     });
 
