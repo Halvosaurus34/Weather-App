@@ -42,10 +42,10 @@ function getWeather() {
     $("#icon").html(
       `<img class="ml-5" src="https://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png"/>`
     );
-
+    //set lat and long for other API URLs
     lat = response.coord.lat;
     lon = response.coord.lon;
-
+    //API URL for 5 day forecast
     var DailyURL =
       `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&appid=` +
       APIKey;
@@ -54,6 +54,7 @@ function getWeather() {
       url: DailyURL,
       method: "GET",
     }).then(function (response) {
+      //inserting daily temperatures,humidity, weather icon and date
       $("#temp1").html(`Temp: ${response.daily[1].temp.day} \xB0C`);
       $("#date1").text(moment().add(1, "days").format("MMM Do YYYY"));
       $("#humid1").html(`Humidity: ${response.daily[1].humidity}%`);
@@ -99,8 +100,10 @@ function getWeather() {
       url: UvURL,
       method: "GET",
     }).then(function (response) {
+      //inserting UV index
       $("#uvNum").text(`${response.value}`);
       console.log(response.value);
+      //setting UV color
       if (response.value < 2) {
         $("#uvNum").attr("class", "btn btn-success");
       } else if (response.value >= 2 && response.value <= 5) {
@@ -113,18 +116,18 @@ function getWeather() {
     });
   });
 }
-
+//able to click city history
 function reSubmit(city) {
   cityName = city;
   getWeather();
 }
-
+//click event for search
 $("#searchButton").on("click", function () {
   cityName = $("#cityName").val();
   getWeather();
   saveCity();
 });
-
+//store in local storage
 function saveCity() {
   localStorage.lastCity = cityName;
   var cityList = JSON.parse(localStorage.cityList || "[]");
@@ -133,7 +136,7 @@ function saveCity() {
 
   cityHistory = JSON.parse(localStorage.cityList);
   document.getElementById("cityHistory").innerHTML = ``;
-
+  //create city history list
   for (var i = 0; i < cityHistory.length; i++) {
     document.getElementById(
       "cityHistory"
