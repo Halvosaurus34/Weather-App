@@ -24,6 +24,10 @@ With instruction from Fil and Daniel.
 
 ## Links
 
+![Website Screenshot](./assets/images/screenshot.PNG)
+
+---
+
 [GitHub Repository](https://github.com/Halvosaurus34/Weather-App)
 
 ---
