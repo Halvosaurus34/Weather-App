@@ -25,15 +25,19 @@
   <body>
     <!-- Nav Bar -->
     <nav class="container-fluid navBack">
-      <span class="mb-0 ml-5 h1">Levi's Weather</span>
-      <span class="mb-0 h2 mr-5 mt-1 float-right" id="top-date"></span>
-      <span class="mb-0 mr-5 h2 mt-1 float-right" id="top-time"></span>
+      <div class="container-fluid">
+        <div class="row">
+          <span class="mb-0 ml-5 h1">Levi's Weather</span>
+          <span class="mb-0 h2 mr-5 mt-1 float-right" id="top-date"></span>
+          <span class="mb-0 mr-5 h2 mt-1 float-right" id="top-time"></span>
+        </div>
+      </div>
     </nav>
 
     <div class="container-fluid">
       <div class="row">
         <!-- search bar -->
-        <div class="col-3 searchAside rounded mt-3">
+        <div class="col-12 col-sm-12 col-md-2 searchAside rounded mt-3">
           <div class="h4 mt-3 ml-1 mb-2">Search Your City:</div>
           <div class="input-group mb-4 ml-1 mr-5">
             <input
@@ -54,7 +58,7 @@
           <div class="list-group ml-1 mb-3" id="cityHistory"></div>
         </div>
         <!-- main weather -->
-        <div class="col-9 mt-1 float-right">
+        <div class="col-12 col-sm-12 col-md-9 mt-1 float-right">
           <div class="rounded shadow">
             <div class="h3 ml-5 mt-2 mb-1" id="cityDisplay"></div>
             <div id="icon"></div>
@@ -68,35 +72,35 @@
             <!-- 5 day forecast -->
             <div class="h3 ml-3">5-Day Forecast:</div>
             <div class="ml-3 row h3">
-              <div class="col-2 card mb-2">
+              <div class="col-11 col-sm-11 col-md-9 card mb-2">
                 <div class="card-body"></div>
                 <h5 class="card-title" id="date1">Card title</h5>
                 <div id="img1"></div>
                 <p class="card-text lead" id="temp1"></p>
                 <p class="card-text lead mb-1" id="humid1"></p>
               </div>
-              <div class="col-2 ml-2 card mb-2">
+              <div class="col-11 col-sm-11 col-md-9 mb-2 card mb-2">
                 <div class="card-body pt-1"></div>
                 <h5 class="card-title" id="date2">Card title</h5>
                 <div id="img2"></div>
                 <p class="card-text lead" id="temp2"></p>
                 <p class="card-text lead mb-1" id="humid2"></p>
               </div>
-              <div class="col-2 ml-2 card mb-2">
+              <div class="col-11 col-sm-11 col-md-9 mb-2 card mb-2">
                 <div class="card-body"></div>
                 <h5 class="card-title" id="date3">Card title</h5>
                 <div id="img3"></div>
                 <p class="card-text lead" id="temp3"></p>
                 <p class="card-text lead mb-1" id="humid3"></p>
               </div>
-              <div class="col-2 ml-2 card mb-2">
+              <div class="col-11 col-sm-11 col-md-9 mb-2 card mb-2">
                 <div class="card-body"></div>
                 <h5 class="card-title" id="date4">Card title</h5>
                 <div id="img4"></div>
                 <p class="card-text lead" id="temp4"></p>
                 <p class="card-text lead mb-1" id="humid4"></p>
               </div>
-              <div class="col-2 ml-2 card mb-2">
+              <div class="col-11 col-sm-11 col-md-9 mb-2 card mb-2">
                 <div class="card-body"></div>
                 <h5 class="card-title" id="date5">Card title</h5>
                 <div id="img5"></div>
